@@ -1,0 +1,21 @@
+/*****Reset*****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/********** Øvelse 1 ***********/
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+/********** Øvelse 2 ***********/
+/********** Øvelse 3 ***********/

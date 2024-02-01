@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekt øvelse</title>
+</head>
+
+<body>
+    <h1>Mit band</h1>
+    <p></p>
+
+    <script>
+        /* Opretter objekt og definerer oplysninger */
+        const yndlingsBand = {
+            navn: "5 seconds of summer",
+            dannet: "2010",
+            albums: ["sidste sommer", "næste jul", 5],
+            medlemmer: ["Peter", " Jytte", " Niels"],
+        }
+
+        /* Få opbjektet ind på sitet */
+        const p = document.querySelector("p");
+
+        /* Forskellige måder at få informationer ind på dom  */
+        p.textContent = yndlingsBand.navn;
+        // p.textContent = 'Mit yndlingsband er' + yndlingsBand.navn;
+        // p.textContent = `Mit yndlingsband er ${yndlingsBand.navn}`;
+        p.textContent += ". Det er dannet i: " + yndlingsBand.dannet;
+        p.textContent += ". Medlemmerne er: " + yndlingsBand.medlemmer;
+        p.textContent += ". Forsanger er: " + yndlingsBand.medlemmer[0];
+
+        /* hvordan man kan tilføje alt til img */
+        // const img = document.querySelector("img");
+        // img.alt = "Profilbillede"
+
+    </script>
+</body>
+
+</html>

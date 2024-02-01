@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercise 1</title>
+</head>
+
+<body>
+    <h1>Ecxersise 1</h1>
+    <div class="grid_1-1">
+        <img src="img/snaps.jpg" alt="Snaps">
+        <img src="img/corona.jpg" alt="Corona">
+        <img src="img/squash.jpg" alt="Squash">
+        <img src="img/Cola.webp" alt="Cola">
+
+    </div>
+
+    <script>
+        /* Opretter værdierne*/
+        const beer = document.querySelector("img[alt=snaps]")
+        const corona = document.querySelector("img[alt=corona]")
+        const squash = document.querySelector("img[alt=squash]")
+        const cola = document.querySelector("img[alt=cola]")
+
+        /* lyt efter click */
+        beer.addEventListener("click", tjek)
+        corona.addEventListener("click", tjek)
+        squash.addEventListener("click", tjek)
+        cola.addEventListener("click", tjek)
+
+        /* function og if */
+        /* google hvad this betyder */
+        function tjek() {
+            console.log(this.alt)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

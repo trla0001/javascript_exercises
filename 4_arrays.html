@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays = Liste</title>
+</head>
+
+<body>
+    <h1>Min liste</h1>
+    <ul></ul>
+
+    <script>
+
+        /* gemmer og opretter arrays/liste værdierne*/
+        const frugter = ["banan", "æble", "appelsin"]
+        const ul = document.querySelector("ul");
+
+        /* forEach = for hver frugt gør noget */
+        frugter.forEach(bygListe);
+
+        /* laver en liste */
+        function bygListe(frugt) {
+            console.log(frugt)
+            ul.innerHTML += "<li>" + frugt + "</li>";
+        }
+
+        /* tilføjer man index i frugt parantes, så kan man se numrene i console */ 
+
+    </script>
+</body>
+
+</html>

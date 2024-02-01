@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playliste</title>
+</head>
+
+<body>
+    <h1>Playliste</h1>
+    <ul></ul>
+
+    <script>
+        const sange = ["Juice", "I wanna dance", "Hungry eyes", "I cant feel my face", "Kiss me", "Paint the town red"]
+        const ul = document.querySelector("ul")
+
+        /* forEach = for hver frugt gør noget */
+        sange.forEach(bygListe);
+
+        /* laver en liste */
+        function bygListe(sang, index) {
+            console.log(sang)
+            ul.innerHTML += "<li>" + sang + "</li>";
+        }
+
+
+    </script>
+</body>
+
+</html>

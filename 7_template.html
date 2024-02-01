@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template øvelse</title>
+</head>
+
+<body>
+    <h1>Biler</h1>
+
+
+    <template>
+        <article>
+            <h1>Brand</h1>
+            <h2></h2>
+            <p></p>
+            <img src="" alt="">
+        </article>
+    </template>
+
+    <script>
+        const biler = [
+
+            {
+                brand: "Peugeot",
+                model: "5008",
+                motor: "benzin",
+                passagerer: ["Jonas ", "Martin ", "Louise ", "Peter ", "Alan"],
+                billede: "Cola.webp"
+            },
+            {
+                brand: "Tesla",
+                model: "S",
+                motor: "el",
+                passagerer: ["Elon ", "Jeff ", "Marc"],
+                billede: "Cola.webp"
+            },
+            {
+                brand: "BMW",
+                model: "M340i",
+                motor: "diesel",
+                passagerer: [" Jytte ", "Hans ", "Asta ", "Storm"],
+                billede: "Cola.webp"
+            }
+
+        ]
+
+        /* Få fat i templates indhold */
+        const skabelon = document.querySelector("template").content;
+
+        /* klon inde i loopet, fordi jeg skal have fat i hvert element*/
+        biler.forEach(visBiler);
+
+        function visBiler(bil) {
+            console.log(bil)
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

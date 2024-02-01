@@ -9,11 +9,10 @@
 
 <body>
     <h1>Biler</h1>
-
+    <main></main>
 
     <template>
         <article>
-            <h1>Brand</h1>
             <h2></h2>
             <p></p>
             <img src="" alt="">
@@ -42,7 +41,7 @@
                 model: "M340i",
                 motor: "diesel",
                 passagerer: [" Jytte ", "Hans ", "Asta ", "Storm"],
-                billede: "Cola.webp"
+                billede: "corona.jpg"
             }
 
         ]
@@ -50,11 +49,23 @@
         /* Få fat i templates indhold */
         const skabelon = document.querySelector("template").content;
 
-        /* klon inde i loopet, fordi jeg skal have fat i hvert element*/
+        /* */
         biler.forEach(visBiler);
 
+        /* Loop, klon er inde i loopet (const klon = skabelon.cloneNode(true);) */
         function visBiler(bil) {
+            const klon = skabelon.cloneNode(true);
             console.log(bil)
+
+            klon.querySelector("h2").textContent = "Brand : " + bil.brand;
+            klon.querySelector("p").textContent = "Model : " + bil.model;
+            klon.querySelector("img").src = "billede : " + bil.billede;
+
+
+            const beholder = document.querySelector("main");
+            beholder.appendChild(klon);
+
+
         }
 
 

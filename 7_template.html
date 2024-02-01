@@ -11,11 +11,13 @@
     <h1>Biler</h1>
     <main></main>
 
-    <template>
+    <template id="bilTemplate">
         <article>
-            <h2></h2>
-            <p></p>
             <img src="" alt="">
+            <h1>Brand</h1>
+            <h2>model</h2>
+            <p>motor</p>
+            <div>passagerer</div>
         </article>
     </template>
 
@@ -25,41 +27,43 @@
             {
                 brand: "Peugeot",
                 model: "5008",
-                motor: "benzin",
-                passagerer: ["Jonas ", "Martin ", "Louise ", "Peter ", "Alan"],
-                billede: "Cola.webp"
+                motor: "bensin",
+                passagerer: [" Jonas", " Martin", " Louise", " Peter", " Alan"],
+                billede: "peugeot.webp"
             },
             {
                 brand: "Tesla",
                 model: "S",
                 motor: "el",
-                passagerer: ["Elon ", "Jeff ", "Marc"],
-                billede: "Cola.webp"
+                passagerer: [" Elon", " Jeff", " Marc"],
+                billede: "tesla_s.png"
             },
             {
                 brand: "BMW",
                 model: "M340i",
                 motor: "diesel",
-                passagerer: [" Jytte ", "Hans ", "Asta ", "Storm"],
-                billede: "corona.jpg"
+                passagerer: [" Jytte", " Hans", " Asta ", " Storm"],
+                billede: "bmw.png"
             }
 
         ]
 
         /* Få fat i templates indhold */
-        const skabelon = document.querySelector("template").content;
+        const skabelon = document.querySelector("#bilTemplate").content;
 
         /* */
-        biler.forEach(visBiler);
+        biler.forEach(visBil);
 
         /* Loop, klon er inde i loopet (const klon = skabelon.cloneNode(true);) */
-        function visBiler(bil) {
+        function visBil(bil) {
             const klon = skabelon.cloneNode(true);
             console.log(bil)
 
-            klon.querySelector("h2").textContent = "Brand : " + bil.brand;
-            klon.querySelector("p").textContent = "Model : " + bil.model;
-            klon.querySelector("img").src = "billede : " + bil.billede;
+            klon.querySelector("h1").textContent = bil.brand;
+            klon.querySelector("h2").textContent = bil.model;
+            klon.querySelector("p").textContent = bil.motor;
+            klon.querySelector("div").textContent = bil.passagerer;
+            klon.querySelector("img").src = bil.billede;
 
 
             const beholder = document.querySelector("main");

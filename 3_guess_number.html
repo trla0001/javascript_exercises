@@ -8,10 +8,31 @@
 </head>
 
 <body>
-    <h1>Excersise 3</h1>
+    <h1>Gæt et tal mellem 0 og 10</h1>
+    <input type="number" id="tal">
+    <button>Gæt</button>
 
-    <h3>Gæt et tal</h3>
-    <p></p>
+    <script>
+        const knap = document.querySelector("button")
+        knap.addEventListener("click", test)
+
+        function test() {
+            console.log(tal);
+            const input = document.querySelector("#tal").value;
+            if (tal == input) {
+                confirm(input + "Det er rigtigt! Vil du prøve igen?");
+                tal = Math.floor(Math.random() * 11)
+            }
+            else if (input < tal) {
+                confirm(input + "Det er for lavt! Prøv igen");
+            }
+            else {
+                confirm(input + "Det er for højt! Prøv igen");
+            }
+        }
+
+        /* confirm er pop up boks, man kan også bruge alert. Er ikke brugervenligt, ville lave sin egen boks*/
+    </script>
 </body>
 
 </html>

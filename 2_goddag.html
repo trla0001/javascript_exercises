@@ -12,7 +12,23 @@
     <h1>Ecxersise 2</h1>
     <h2>Siger godmorgen, goddag, godaften og godnat i consol</h2>
 
-    <script src="2.js"></script>
+    <script>
+        const tid = new Date().getHours();
+
+
+        if (tid > 5) {
+            console.log("Godmorgen");
+        }
+        else if (tid >= 9) {
+            console.log("Goddag");
+        } else if (tid >= 17) {
+            console.log("Godaften");
+        } else {
+            console.log("Godnat");
+        }
+
+
+    </script>
 </body>
 
 </html>
